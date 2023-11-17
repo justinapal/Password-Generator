@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Heebo:wght@100;300&family=Inter:wght@300&family=Montserrat:wght@200&family=Space+Mono&display=swap" rel="stylesheet">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+            <div class="container">
+                <div class="container-inner">
+                    <h1><span class="white">Generate a</span><br> random password</h1>
+                    <p>Never use an insecure password again.</p>
+                    <div class="generate-customize">
+                        <button onclick="renderPassword()">Generate passwords</button> <br>
+                        <p class="mobile-char-length">(min 6 characters, max 15)</p>
+                        <div class="mobile">
+                            <p id="select-length">Select password's length</p>
+                            <input type="number" id="pswd-length" name="pswd-length" onblur="getVal()" min="6" max="15">
+                            <div class="checkbox-container">
+                                <span class="symbols">No symbols</span><label for="symbols"><input type="checkbox" id="symbols" name="symbols" value="no-symbols"></label>
+                                <span class="numbers">No numbers</span><label for="numbers"><input type="checkbox" id="numbers" name="numbers" value="no-numbers"></label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="line-el"></div>
+                    <div class="pswd-container">
+                    <div class="pswd-field" id="pswd-field1">password</div>
+                    <div class="pswd-field" id="pswd-field2">password</div>
+                </div>
+                <p>Click on the password field to copy content.</p>
+            </div>
+        <script src="index.js"></script>
+    </body>
+</html>
